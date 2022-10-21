@@ -1,100 +1,117 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
-body {
-    background: rgb(247, 247, 247);     
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
 }
-/* organizar indice com flexbox */
-.indice {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+html{
+    overflow-x: hidden;
 }
-li {
-    list-style: none;
-}
-.itensindice{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10px;
-}
-a{
-    text-decoration: none;
-}
-.itensindice a {
-    color: rgb(0, 0, 0);
-    font-size: 1.3rem;
-}
-.itensindice :hover {
-    color: rgb(109, 109, 109);
+.l-section--hero {
+  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/bg-computer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  color: rgb(245, 236, 236);
 }
 
-
-h1 {    
-    font-family: 'Alkalami', serif;
-} 
-.negrito {
-    font-weight:bold;
-    color: black;
+.l-section--hero::before {
+  content: "";
+  height: 100%;
+  left: -50%;
+  position: absolute;
+  top: 90%;
+  transform-origin: right;
+  transform: skewY(10deg);
+  width: 100%;
 }
 
-/* organizar infomacoes em flexbox */
-
-.informacoes{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    flex-direction: row;
+.l-section--hero::after {
+  content: "";
+  height: 100%;
+  right: -50%;
+  position: absolute;
+  top: 90%;
+  transform-origin: left;
+  transform: skewY(-10deg);
+  width: 100%;
 }
 
-.info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.l-section--hero::before,
+.l-section--hero::after {
+  background-color: rgb(253, 253, 253);
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.nome{ 
-    margin: 0;
-}
-
-.redes {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  width: 90vw;
+  position: absolute;
+  top: 15px;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
+header p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: block;
+  color: white;
 }
 
-.redes img {
-    width: 30px;
-    height: 30px;
+header li {
+  list-style: none;
+  display: inline-block;
 }
 
-.habilidades {
-    margin-top: 3em;
-    padding: 0;
-    display: flex;
-    gap: 0.5em
+header li a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgb(245, 236, 236);
+  font-weight: 500;
+  padding: 30px;
 }
 
-.habilidades img {
-    width: 30px;
-    height: 30px;
+.container-hero{
+    text-align: center;
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%); 
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: block;
+}
+.container-hero h1{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    padding: 30px;
+}
+
+.container-hero p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px;
 }
 
 .foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid rgb(235, 243, 236);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: -100px;
+}
+
+img{
+    width: 165px;
+    height: 165px;
+    border-radius: 100%;
+    border: 3px #0352FF solid;
 }
