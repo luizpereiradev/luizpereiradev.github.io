@@ -4,19 +4,23 @@
   padding: 0;
   font-family: poppins;
 }
-html{
-    overflow-x: hidden;
+html {
+  overflow-x: hidden;
 }
-.l-section--hero {
-  background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(assets/bg-computer.png);
+.section-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/bg-computer.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
   width: 100vw;
+  display: flex;
   color: rgb(245, 236, 236);
+  align-items: center;
+  justify-content: center;
 }
 
-.l-section--hero::before {
+.section-bg::before {
   content: "";
   height: 100%;
   left: -50%;
@@ -27,7 +31,7 @@ html{
   width: 100%;
 }
 
-.l-section--hero::after {
+.section-bg::after {
   content: "";
   height: 100%;
   right: -50%;
@@ -38,8 +42,8 @@ html{
   width: 100%;
 }
 
-.l-section--hero::before,
-.l-section--hero::after {
+.section-bg::before,
+.section-bg::after {
   background-color: rgb(253, 253, 253);
 }
 
@@ -75,43 +79,77 @@ header li a {
   padding: 30px;
 }
 
-.container-hero{
-    text-align: center;
-    position: relative;
-    top: 30%;
-    transform: translateY(-50%); 
-    color: rgb(255, 255, 255);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
-    display: block;
+.container-hero {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: block;
 }
-.container-hero h1{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 72px;
-    padding: 30px;
+.container-hero h1 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  padding: 30px;
 }
 
-.container-hero p{
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 26px;
+.container-hero p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
 }
 
-.foto{
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    top: -100px;
+.foto {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: -100px;
 }
 
-img{
-    width: 165px;
-    height: 165px;
-    border-radius: 100%;
-    border: 3px #0352FF solid;
+img {
+  width: 165px;
+  height: 165px;
+  border-radius: 100%;
+  border: 3px #0352ff solid;
+}
+.section-description {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+.description {
+  text-align: center;
+  width: 53%;
+}
+
+.description h2 {
+  color: #414141;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.desc {
+  color: #414141;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.description p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #606060;
+  padding: 15px;
+}
+
+main {
+  position: relative;
+  top: -100px;
 }
