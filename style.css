@@ -8,6 +8,7 @@
 html {
   overflow-x: hidden;
   background-color: #414141;
+  scroll-behavior:smooth
 }
 
 /* header */
@@ -44,7 +45,12 @@ header li a {
   padding: 30px;
 }
 
+header a:hover {
+  color: #414141;
+}
+
 /* section 1 */
+
 .section-bg {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(assets/bg-computer.png);
@@ -73,12 +79,12 @@ header li a {
 .section-bg::after {
   content: "";
   height: 100%;
-  right: -50%;
+  right: 0;
   position: absolute;
   top: 90%;
   transform-origin: left;
   transform: skewY(-10deg);
-  width: 100%;
+  width: 50%;
 }
 
 .section-bg::before,
@@ -195,6 +201,9 @@ main {
   margin: 0px 10px 55px 10px;
 }
 
+.skills-item:hover{
+  border: 2px solid #0352ff;
+}
 .img-wpp-wpp {
   height: 50px;
   position: relative;
@@ -356,6 +365,10 @@ button{
   line-height: 36px;
   color: #FFFFFF;
   border: none;
+}
+
+button:hover{
+  background: rgb(3, 82, 255);
 }
 
 form{

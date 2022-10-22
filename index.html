@@ -10,15 +10,14 @@
 </head>
 
 <body>
-  <header>
+  <header id="home">
     <p>Luiz</p>
     <nav>
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#descricao">Sobre</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
@@ -33,7 +32,7 @@
       </div>
   </section>
   <div class="foto">
-    <img src="./assets/foto.jpeg" alt="">
+    <img src="./assets/foto.jpeg" alt="Luiz Felipe, com camisa azul" id="descricao">
   </div>
   <main>
     <section class="section-description">
@@ -58,7 +57,7 @@
         </section>
       </article>
     </section>
-    <section class="skills">
+    <section class="skills" id="skills">
       <h2 class="title-section">Skills</h2>
       <div class="skills-container">
         <div class="skills-item">
@@ -112,11 +111,11 @@
           </p>
         </div>
     </section>
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
       <h2 class="title-section-port">Portfolio</h2>
       <h2>Em construção</h2>
     </section>
-    <section class="contato">
+    <section class="contato" id="contato">
       <h2 class="title-section">Contact</h2>
       <section class="contato-container-p">
         <section class="contato-container">
@@ -151,7 +150,7 @@
 
         <section class="form">
           <!-- fazer um form com espaço para nome, email e mensagem com botão de enviar -->
-          <form action="https://formspree.io/f/xnqoqzqz" method="POST">
+          <form action="https://formspree.io/f/mdojlvjg" method="POST">
             <div class="form-group">
               <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
               <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
@@ -175,19 +174,25 @@
     </div>
     <div class="footer-container">
         <div class="footer-item">
-          <div class="icon-f-wpp">
-            <img src="./assets/github.png" alt="GitGub icon" />
-          </div>
+          <a href="https://github.com/luizpereiradev/" target="_blank">
+            <div class="icon-f-wpp">
+              <img src="./assets/github.png" alt="GitGub icon" />
+            </div>
+          </a>
         </div>
         <div class="footer-item">
-          <div class="icon-f-wpp">
-            <img src="./assets/instagram.svg" alt="Instagram icon" />
-          </div>
+          <a href="https://www.instagram.com/luckse3/" target="_blank">
+            <div class="icon-f-wpp">
+              <img src="./assets/instagram.svg" alt="Instagram icon" />
+            </div>
+          </a>
         </div>
         <div class="footer-item">
-          <div class="icon-f-wpp">
-            <img src="./assets/linkedin.svg" alt="Linkedin icon" />
-          </div>
+          <a href="https://www.linkedin.com/in/luizpes/" target="_blank">
+            <div class="icon-f-wpp">
+              <img src="./assets/linkedin.svg" alt="Linkedin icon" />
+            </div>
+          </a>
         </div>
     </div>
   </footer>
