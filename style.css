@@ -1,100 +1,269 @@
-@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
-body {
-    background: rgb(247, 247, 247);     
+@import url("https://fonts.googleapis.com/css2?family=Alkalami&family=Poppins:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins;
+  box-sizing: border-box;
 }
-/* organizar indice com flexbox */
-.indice {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    
+html {
+  overflow-x: hidden;
 }
-li {
-    list-style: none;
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  width: 90vw;
+  position: absolute;
+  top: 15px;
 }
-.itensindice{
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 10px;
+
+header p {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: block;
+  color: white;
 }
-a{
-    text-decoration: none;
+
+header li {
+  list-style: none;
+  display: inline-block;
 }
-.itensindice a {
-    color: rgb(0, 0, 0);
-    font-size: 1.3rem;
+
+header li a {
+  text-decoration: none;
+  font-size: 20px;
+  line-height: 30px;
+  color: rgb(245, 236, 236);
+  font-weight: 500;
+  padding: 30px;
 }
-.itensindice :hover {
-    color: rgb(109, 109, 109);
+
+/* section 1 */
+.section-bg {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(assets/bg-computer.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  color: rgb(245, 236, 236);
+  align-items: center;
+  justify-content: center;
+}
+
+.section-bg::before {
+  content: "";
+  height: 100%;
+  left: -50%;
+  position: absolute;
+  top: 90%;
+  transform-origin: right;
+  transform: skewY(10deg);
+  width: 100%;
+}
+
+.section-bg::after {
+  content: "";
+  height: 100%;
+  right: -50%;
+  position: absolute;
+  top: 90%;
+  transform-origin: left;
+  transform: skewY(-10deg);
+  width: 100%;
+}
+
+.section-bg::before,
+.section-bg::after {
+  background-color: rgb(253, 253, 253);
+}
+
+.container-hero {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 36px;
+  display: block;
+}
+
+.text-wpp{
+  display: flex;
+}
+
+.container-hero h1 {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 72px;
+  padding: 30px 0 30px 6px;
+}
+
+.container-hero p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 26px;
+}
+
+.foto {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: -100px;
+}
+
+.foto img {
+  width: 165px;
+  height: 165px;
+  border-radius: 100%;
+  border: 3px #0352ff solid;
 }
 
 
-h1 {    
-    font-family: 'Alkalami', serif;
-} 
-.negrito {
-    font-weight:bold;
-    color: black;
+/* seção description */
+
+main {
+  position: relative;
+  top: -100px;
 }
 
-/* organizar infomacoes em flexbox */
-
-.informacoes{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
-    flex-direction: row;
+.section-description {
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+.description {
+  text-align: center;
+  width: 53%;
 }
 
-.info{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+.description h2 {
+  color: #414141;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 48px;
 }
 
-.links{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-.nome{ 
-    margin: 0;
+.desc {
+  color: #414141;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
 }
 
-.redes {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    
+.description p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-align: center;
+  color: #606060;
+  padding-top: 30px;
 }
 
-footer{
-    display: flex;
-    justify-content: center;
+/* skills */
+
+.skills{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.redes img {
-    width: 30px;
-    height: 30px;
+.skills-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.habilidades {
-    margin-top: 3em;
-    padding: 0;
-    display: flex;
-    gap: 0.5em
+.skills-item{
+  width: 380px;
+  height: 260px;
+  border-radius: 3%;
+  border: 2px solid rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  margin: 0px 10px 55px 10px;
 }
 
-.habilidades img {
-    width: 30px;
-    height: 30px;
+.img-wpp-wpp {
+  height: 50px;
+  position: relative;
+  top: -40px;
+  left: 40px;
 }
 
-.foto{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 2px solid rgb(235, 243, 236);
+.img-wpp{
+  width: 80px;
+  height: 80px;
+  background-color: #E6EEFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.img-wpp img{
+    width: 24px;
+    height: 24px;
+}
+
+.skills h2{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #0352FF;
+  padding: 56px 0;
+}
+
+.skills-item h3{
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: #414141;
+  padding: 15px;
+  padding-left: 40px;
+}
+
+.skills-item p{
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #606060;
+  padding: 15px;
+  padding-left: 40px;
+}
+
+
+
+/* animations */
+.typed-cursor {
+  animation: blinkCursor 500ms steps(30) infinite normal, typing 3s 1s normal both;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid rgb(255, 255, 255);
+
+}
+
+@keyframes blinkCursor {
+  from{
+    border-right-color: rgb(255, 255, 255);
+  }
+  to{
+    border-right-color: transparent;
+  }
+}
+
+@keyframes typing{
+  from{
+    width: 0;
+  }
+  to{
+    width: 63%;
+  }
 }
