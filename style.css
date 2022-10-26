@@ -2,13 +2,13 @@
 
 :root {
 
-  --default-text-color : rgb(65, 65, 65);
+  --default-text-color: rgb(65, 65, 65);
 
-  --default-text-color-light : rgb(96, 96, 96);
+  --default-text-color-light: rgb(96, 96, 96);
 
-  --dark-color : rgb(3, 82, 255);
+  --dark-color: rgb(3, 82, 255);
 
-  --light-color : rgb(78, 134, 255);
+  --light-color: rgb(78, 134, 255);
 }
 
 @viewport {
@@ -28,46 +28,51 @@ html {
   overflow-x: hidden;
 }
 
+footer p {
+  padding: 30px 0;
+}
+
 /* header */
-header {
+#header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 5%;
+  color: whitesmoke;
   width: 90vw;
   position: absolute;
   top: 15px;
 }
 
-header p {
+.header__logo {
   font-weight: 700;
   font-size: 24px;
   line-height: 36px;
   display: block;
-  color: white;
 }
 
-header li {
+.header__list {
   list-style: none;
-  display: inline-block;
+  display: flex;
 }
 
-header li a {
+.header__list a {
   text-decoration: none;
   font-size: 20px;
   line-height: 30px;
-  color: rgb(245, 236, 236);
   font-weight: 500;
+  color: whitesmoke;
   padding: 30px;
 }
 
-header a:hover {
+.header__list a:hover {
   color: var(--default-text-color);
 }
 
 /* section 1 */
-.section-bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('assets/bg-computer.png');
+.bgSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('assets/bg-computer.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
@@ -79,7 +84,7 @@ header a:hover {
   background-attachment: fixed;
 }
 
-.section-bg:before {
+.bgSection:before {
   content: '';
   height: 200%;
   left: -50%;
@@ -90,7 +95,7 @@ header a:hover {
   width: 100%;
 }
 
-.section-bg:after {
+.bgSection:after {
   content: '';
   height: 200%;
   right: 0;
@@ -101,11 +106,11 @@ header a:hover {
   width: 51%;
 }
 
-.section-bg:before , .section-bg:after {
+.bgSection:before , .bgSection:after {
   background-color: rgb(253, 253, 253);
 }
 
-.container-hero {
+.bgSection__container {
   text-align: center;
   color: white;
   font-weight: 700;
@@ -114,33 +119,31 @@ header a:hover {
   display: block;
 }
 
-.text-wpp {
+.bgSection__textContainer {
   display: flex;
   flex-direction: column;
 }
 
-.container-hero h1 {
-  font-style: normal;
+.bgSection__container h1 {
   font-weight: 500;
   font-size: 72px;
   padding: 30px 0 30px 6px;
 }
 
-.container-hero p {
-  font-style: normal;
+.bgSection__container p {
   font-weight: 400;
   font-size: 17px;
   line-height: 26px;
 }
 
-.foto {
+.imgContainer {
   z-index: 2;
   position: absolute;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.foto img {
+.imgContainer img {
   width: 165px;
   height: 165px;
   border-radius: 100%;
@@ -154,33 +157,33 @@ main {
   /* top: -100px; */
 }
 
-.section-description {
+.description {
   color: black;
   display: flex;
   justify-content: center;
   padding-top: 80px;
 }
 
-.description {
+.description__container {
   text-align: center;
   width: 53%;
 }
 
-.description h2 {
+.description__container h2 {
   color: var(--default-text-color);
   font-weight: 600;
   font-size: 32px;
   line-height: 48px;
 }
 
-.desc {
+.description__title {
   color: var(--default-text-color);
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
 }
 
-.description p {
+.description__container p {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -190,7 +193,7 @@ main {
 }
 
 /* skills */
-.skills {
+#skills {
   background-color: white;
   display: flex;
   justify-content: center;
@@ -198,14 +201,15 @@ main {
   flex-direction: column;
 }
 
-.skills-container {
+.skills__container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 1500px;
 }
 
-.skills-item {
+.skills__item {
   width: 380px;
   height: 260px;
   border-radius: 3%;
@@ -215,11 +219,11 @@ main {
   margin: 0 10px 55px;
 }
 
-.skills-item:hover {
+.skills__item:hover {
   border: 2px solid var(--dark-color);
 }
 
-.img-wpp-wpp {
+.skills__image {
   height: 50px;
   width: 50px;
   position: relative;
@@ -227,7 +231,7 @@ main {
   left: 40px;
 }
 
-.img-wpp {
+.skills__image__container {
   width: 80px;
   height: 80px;
   background-color: whitesmoke;
@@ -237,12 +241,12 @@ main {
   justify-content: center;
 }
 
-.img-wpp img {
+.skills__image__container img {
   width: 24px;
   height: 24px;
 }
 
-.title-section {
+.title__section {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -250,7 +254,7 @@ main {
   padding: 56px 0;
 }
 
-.title-section-port {
+.title__section--port {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -258,7 +262,7 @@ main {
   padding: 0 0 56px;
 }
 
-.skills-item h3 {
+.skills__item h3 {
   font-weight: 600;
   font-size: 24px;
   line-height: 36px;
@@ -267,7 +271,7 @@ main {
   padding-left: 40px;
 }
 
-.skills-item p {
+.skills__item p {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -276,43 +280,136 @@ main {
   padding-left: 40px;
 }
 
-.portfolio {
+#portfolio {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  height: 40vh;
+  height: 50vh;
   background-color: white;
 }
 
-.contato {
+.projects {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1500px;
+}
+
+.project {
+  width: 380px;
+  height: 260px;
+  border-radius: 3%;
+  position: relative;
+  margin: 0 10px 55px;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  transition: 0.5s ease-out;
+  overflow: visible;
+}
+
+.project:nth-child( 1 ) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://tipscode.com.br/uploads/2020/04/cometchat-1024x546.png');
+  background-size: cover;
+}
+
+.project:nth-child( 2 ) {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfry6jefZzn_2IkCo9z1LnPbcRp-0OTeFAw&usqp=CAU');
+  background-size: cover;
+}
+
+.project:hover {
+  border-color: var(--dark-color);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+
+.project:nth-child( 1 ):hover {
+  background: url('https://tipscode.com.br/uploads/2020/04/cometchat-1024x546.png');
+  background-size: cover;
+}
+
+.project:nth-child( 2 ):hover {
+  background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVfry6jefZzn_2IkCo9z1LnPbcRp-0OTeFAw&usqp=CAU');
+  background-size: cover;
+}
+
+.project__details {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 36px;
+  color: white;
+  height: 100%;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project:hover .project__details {
+  display: none;
+}
+
+.project__button {
+  transform: translate(-50%, 125%);
+  width: 60%;
+  border-radius: 1rem;
+  border: none;
+  background-color: var(--light-color);
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  opacity: 0;
+  transition: 0.3s ease-out;
+}
+
+.project:hover .project__button {
+  transform: translate(-50%, 50%);
+  opacity: 1;
+}
+
+/* Text */
+.project__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  color: white;
+}
+
+#contato {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: white;
+  background-color: whitesmoke;
   overflow: hidden;
 }
 
-.contato-container {
+.contato__items {
   width: 50vw;
   padding: 0 5vw;
 }
 
-.contato-container-p {
+.contato__container {
   display: flex;
   justify-content: center;
   flex-direction: row;
+  max-width: 1500px;
 }
 
-.contato-item {
+.contato__item {
   display: flex;
   width: 231px;
   height: 80px;
   margin-bottom: 50px;
 }
 
-.contato-item h3 {
+.contato__item h3 {
   font-weight: 600;
   font-size: 20px;
   line-height: 30px;
@@ -320,7 +417,7 @@ main {
   padding: 5px 0;
 }
 
-.contato-item p {
+.contato__item p {
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
@@ -329,7 +426,7 @@ main {
   white-space: nowrap;
 }
 
-.icon-wpp {
+.icon__container {
   padding: 0 28px 0 0;
   border-right: 1px solid whitesmoke;
   height: 80px;
@@ -337,25 +434,25 @@ main {
   align-items: center;
 }
 
-.icon-wpp img {
+.icon__container img {
   width: 38px;
   height: 38px;
 }
 
-.contato-text {
+.contato__text {
   padding: 0 0 0 28px;
 }
 
-.form-group {
+.form__group {
   display: flex;
   width: 100%;
 }
 
-.form-group input {
+.form__group input {
   height: 57px;
 }
 
-.form-group input , textarea {
+.form__group input , textarea {
   margin: 10px;
   border: 1px solid rgba(196, 196, 196, 0.568);
   border-radius: 2%;
@@ -406,11 +503,7 @@ footer {
   align-items: center;
 }
 
-footer div {
-  padding: 45px 0 20px;
-}
-
-.footer-container {
+.footer {
   display: flex;
   align-items: center;
   align-content: center;
@@ -418,7 +511,7 @@ footer div {
   justify-content: center;
 }
 
-.icon-f-wpp {
+.footer__item__icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,45 +526,47 @@ footer div {
 
 /* media */
 
-@media only screen and ( max-width : 730px ) {
+@media only screen and ( max-width : 815px ) {
 
   /* Big smartphones [426px -> 600px] */
   header nav {
     display: none;
   }
 
-  .description {
+  .description__container {
     width: 80%;
   }
 
-  .text-wpp {
-    display: block;
-  }
-
-  .contato-container {
+  .contato__items {
     width: 100vw;
     margin: 0 10%;
   }
 
-  .form {
+  .form__section {
     display: none;
   }
 
-  .skills-container {
-    display: flex;
+  #portfolio {
+    height: 100vh;
   }
+
 }
 
 @media only screen and ( max-width : 425px ) {
 
   /* Small smartphones [325px -> 425px] */
-  .skills-item {
+  .skills__item {
+    width: 80%;
+  }
+
+  .project {
     width: 80%;
   }
 }
 
 .typed-cursor {
-  animation: blinkCursor 500ms steps(30) infinite normal, typing 3s 1s normal both;
+  animation: blinkCursor 500ms steps(30) infinite normal,
+    typing 3s 1s normal both;
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid white;

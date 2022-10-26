@@ -11,36 +11,36 @@
 </head>
 
 <body>
-  <header id="home">
-    <p>Luiz</p>
+  <header id="header">
+    <p class="header__logo">Luiz</p>
     <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
+      <ul class="header__list">
+        <li><a href="#header" class="">Home</a></li>
         <li><a href="#descricao">Sobre</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
     </nav>
   </header>
-  <section class="section-bg">
-    <div class="container-hero">
+  <section class="bgSection">
+    <div class="bgSection__container">
       <div>
-        <div class="text-wpp">
+        <div class="bgSection__textContainer">
           <h1>Hi, I'm</h1>
           <h1 class="typed-cursor">Luiz Felipe</h1>
         </div>
-        <p class="expand">Front-end developer - Project Management</p>
+        <p class="expand">Full-Stack Developer</p>
       </div>
   </section>
   <main>
-    <div class="foto">
+    <div class="imgContainer">
       <img src="./assets/foto.jpeg" alt="Luiz Felipe, com camisa azul" id="descricao">
     </div>
-    <section class="section-description">
-      <article class="description">
+    <section class="description">
+      <article class="description__container">
         <h2>Luiz Felipe Da Silva</h2>
-        <p class="desc">Full-Stack Developer</p>
-        <section class="desc-div">
+        <p class="description__title">Full-Stack Developer</p>
+        <section>
           <p>
             Estudante de Desenvolvimento Web na Trybe. Sou apaixonado por tecnologia e por aprender coisas novas.
           </p>
@@ -58,12 +58,12 @@
         </section>
       </article>
     </section>
-    <section class="skills" id="skills">
-      <h2 class="title-section">Skills</h2>
-      <div class="skills-container">
-        <div class="skills-item">
-          <div class="img-wpp-wpp">
-            <div class="img-wpp">
+    <section id="skills">
+      <h2 class="title__section">Skills</h2>
+      <div class="skills__container">
+        <div class="skills__item">
+          <div class="skills__image">
+            <div class="skills__image__container">
               <img src="./assets/html-5.png" alt="html" />
             </div>
           </div>
@@ -71,9 +71,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum ratione nemo sit similique incidunt.
           </p>
         </div>
-        <div class="skills-item">
-          <div class="img-wpp-wpp">
-            <div class="img-wpp">
+        <div class="skills__item">
+          <div class="skills__image">
+            <div class="skills__image__container">
               <img src="./assets/css-3.png" alt="html" />
             </div>
           </div>
@@ -81,9 +81,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum ratione nemo sit similique incidunt.
           </p>
         </div>
-        <div class="skills-item">
-          <div class="img-wpp-wpp">
-            <div class="img-wpp">
+        <div class="skills__item">
+          <div class="skills__image">
+            <div class="skills__image__container">
               <img src="assets/script-java.png" alt="js" />
             </div>
           </div>
@@ -91,9 +91,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum ratione nemo sit similique incidunt.
           </p>
         </div>
-        <div class="skills-item">
-          <div class="img-wpp-wpp">
-            <div class="img-wpp">
+        <div class="skills__item">
+          <div class="skills__image">
+            <div class="skills__image__container">
               <img src="./assets/react.png" alt="html" />
             </div>
           </div>
@@ -101,9 +101,9 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere illum ratione nemo sit similique incidunt.
           </p>
         </div>
-        <div class="skills-item">
-          <div class="img-wpp-wpp">
-            <div class="img-wpp">
+        <div class="skills__item">
+          <div class="skills__image">
+            <div class="skills__image__container">
               <img src="./assets/node-js.png" alt="html" />
             </div>
           </div>
@@ -112,54 +112,71 @@
           </p>
         </div>
     </section>
-    <section class="portfolio" id="portfolio">
-      <h2 class="title-section-port">Portfolio</h2>
-      <h2>Em construção</h2>
+    <section id="portfolio">
+      <h2 class="title__section--port">Portfolio</h2>
+
+      <div class="projects">
+        <div class="project">
+          <div class="project__details">
+            <p class="project__title">Item 1</p>
+            <p class="project__text">Em desenvolvimento</p>
+          </div>
+          <button class="project__button">Mais Informações</button>
+        </div>
+        <div class="project">
+          <div class="project__details">
+            <p class="project__title">Item 2</p>
+            <p class="project__text">Em desenvolvimento</p>
+          </div>
+          <button class="project__button">Mais Informações</button>
+        </div>
+      </div>
+      
     </section>
-    <section class="contato" id="contato">
-      <h2 class="title-section">Contact</h2>
-      <section class="contato-container-p">
-        <section class="contato-container">
-          <div class="contato-item">
-            <div class="icon-wpp">
+    <section id="contato">
+      <h2 class="title__section">Contact</h2>
+      <section class="contato__container">
+        <section class="contato__items">
+          <div class="contato__item">
+            <div class="icon__container">
               <img src="./assets/telefone.svg" alt="telefone icon" />
             </div>
-            <div class="contato-text">
+            <div class="contato__text">
               <h3>Whatsapp</h3>
               <p>61 9 9828-6467</p>
             </div>
           </div>
-          <div class="contato-item">
-            <div class="icon-wpp">
+          <div class="contato__item">
+            <div class="icon__container">
               <img src="./assets/mail.svg" alt="e-mail icon" />
             </div>
-            <div class="contato-text">
+            <div class="contato__text">
               <h3>E-mail</h3>
               <p>luckpecontato@gmail.com</p>
             </div>
           </div>
-          <div class="contato-item">
-            <div class="icon-wpp">
+          <div class="contato__item">
+            <div class="icon__container">
               <img src="./assets/location.svg" alt="location icon" />
             </div>
-            <div class="contato-text">
+            <div class="contato__text">
               <h3>Localização</h3>
               <p>Brasilia, DF</p>
             </div>
           </div>
         </section>
 
-        <section class="form">
+        <section class="form__section">
           <!-- fazer um form com espaço para nome, email e mensagem com botão de enviar -->
           <form action="https://formspree.io/f/mdojlvjg" method="POST">
-            <div class="form-group">
+            <div class="form__group">
               <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
               <input type="email" name="email" id="email" placeholder="Digite seu e-mail" required>
             </div>
-            <div class="form-group">
+            <div class="form__group">
               <input type="text" name="assunto" id="assunto" placeholder="Digite o assunto" required>
             </div>
-            <div class="form-group">
+            <div class="form__group">
               <textarea name="message" id="menssagem" cols="30" rows="10" placeholder="Digite sua mensagem"
                 required></textarea>
             </div>
@@ -173,46 +190,30 @@
     <div>
       <p>Feito com ❤ por Luiz Pereira</p>
     </div>
-    <div class="footer-container">
-        <div class="footer-item">
+    <div class="footer">
+        <div class="footer__item">
           <a href="https://github.com/luizpereiradev/" target="_blank">
-            <div class="icon-f-wpp">
+            <div class="footer__item__icon">
               <img src="./assets/github.png" alt="GitGub icon" />
             </div>
           </a>
         </div>
-        <div class="footer-item">
+        <div class="footer__item">
           <a href="https://www.instagram.com/luckse3/" target="_blank">
-            <div class="icon-f-wpp">
+            <div class="footer__item__icon">
               <img src="./assets/instagram.svg" alt="Instagram icon" />
             </div>
           </a>
         </div>
-        <div class="footer-item">
+        <div class="footer__item">
           <a href="https://www.linkedin.com/in/luizpes/" target="_blank">
-            <div class="icon-f-wpp">
+            <div class="footer__item__icon">
               <img src="./assets/linkedin.svg" alt="Linkedin icon" />
             </div>
           </a>
         </div>
     </div>
   </footer>
-  <script src="https://unpkg.com/blaze-slider@1.5.0/dist/blaze-slider.min.js"></script>
-  <!-- <script>
-    const slider = document.querySelector(".skills-container");
-
-    new BlazeSlider(slider, {
-      all: {
-        enableAutoplay: true,
-        slidesToScroll: 3,
-        slidesToShow: 3,
-        transitionDuration: 300
-      },
-      "(max-width: 500px)": {
-        slidesToShow: 1
-      }
-    });
-  </script> -->
 </body>
 
 </html>
