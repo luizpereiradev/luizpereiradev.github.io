@@ -547,7 +547,7 @@ footer {
   }
 
   #portfolio {
-    height: 100vh;
+    height: 750px;
   }
 
 }
@@ -556,11 +556,11 @@ footer {
 
   /* Small smartphones [325px -> 425px] */
   .skills__item {
-    width: 80%;
+    width: 340px;
   }
 
   .project {
-    width: 80%;
+    width: 340px;
   }
 }
 
