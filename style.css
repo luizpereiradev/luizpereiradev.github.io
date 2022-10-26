@@ -562,6 +562,11 @@ footer {
   .project {
     width: 340px;
   }
+
+  .contato__items {
+    width: 100vw;
+    margin: 0;
+}
 }
 
 .typed-cursor {
