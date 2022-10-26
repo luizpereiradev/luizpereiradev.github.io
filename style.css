@@ -71,8 +71,7 @@ footer p {
 
 /* section 1 */
 .bgSection {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('assets/bg-computer.png');
+  background: url('assets/bg-computer.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 90vh;
@@ -140,7 +139,8 @@ footer p {
   z-index: 2;
   position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  bottom: 0vw;
+  transform: translate(-50%, 0);
 }
 
 .imgContainer img {
