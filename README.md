@@ -1,7 +1,7 @@
 <div align="center"><h1> Portfolio </h1> </div>
 
 # About
-Projeto criado com o objetivo de treinar minhas habilidades com CSS e HTML, completamente responsivo.
+Projeto criado com o objetivo de treinar minhas habilidades com CSS e HTML, atualmente melhorando responsividade.
 
 ## Website is Live : [https://luizpereiradev.github.io](https://luizpereiradev.github.io)
 
